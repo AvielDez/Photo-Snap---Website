@@ -1,10 +1,5 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { AppWrapper } from "./components/AppWrapper";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,9 +11,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <AppWrapper>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </AppWrapper>
       </body>
     </html>
   );
