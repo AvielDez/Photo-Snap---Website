@@ -1,3 +1,7 @@
 .container {
   /* Define styles for the component */
 }
+
+.navLink .active {
+  color: red;
+}

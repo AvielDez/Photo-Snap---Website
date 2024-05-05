@@ -1,7 +1,10 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node';
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Photo Snap | Stories" }, { name: "description", content: "See our stories" }];
+  return [
+    { title: 'Photo Snap | Stories' },
+    { name: 'description', content: 'See our stories' },
+  ];
 };
 
 export default function Stories() {
