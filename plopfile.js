@@ -21,7 +21,7 @@ export default function (plop) {
       },
       {
         type: "add",
-        path: "app/components/{{componentName}}/{{componentName}}.index.ts",
+        path: "app/components/{{componentName}}/index.ts",
         templateFile: "plop-templates/component/index.hbs",
       },
     ],
