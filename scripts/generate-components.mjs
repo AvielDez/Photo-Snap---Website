@@ -13,7 +13,6 @@ const svgsJsonPath = path.join(
 );
 const outputDirectory = path.join(__dirname, '../app/components/icons');
 
-// Adjust this function to include the className prop
 const generateComponent = (name, filePath) => `
 import React from 'react';
 
