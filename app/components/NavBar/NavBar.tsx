@@ -8,24 +8,51 @@ interface NavBarProps {
 export function NavBar() {
   return (
     <nav className={styles.container}>
-      <ul>
-        <li>
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? 'pending' : isActive ? 'active' : ''
-            }
-            to="/stories"
-          >
-            Stories
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/features">Features</NavLink>
-        </li>
-        <li>
-          <NavLink to="/pricing">Pricing</NavLink>
-        </li>
-      </ul>
+      <NavList className={styles.navLinkContainer}>
+        <NavItem
+          to="/stories"
+          activeClass={styles.navLinkActive}
+          name="Stories"
+        />
+        <NavItem
+          to="/features"
+          activeClass={styles.navLinkActive}
+          name="Features"
+        />
+        <NavItem
+          to="/pricing"
+          activeClass={styles.navLinkActive}
+          name="Pricing"
+        />
+      </NavList>
     </nav>
+  );
+}
+
+type NavListProps = {
+  children: React.ReactNode;
+  className: string;
+};
+
+function NavList({ children, className }: NavListProps) {
+  return <ul className={className}>{children}</ul>;
+}
+
+type NavItemProps = {
+  to: string;
+  activeClass: string;
+  name: string;
+};
+
+function NavItem({ to, activeClass, name }: NavItemProps) {
+  return (
+    <li>
+      <NavLink
+        className={({ isActive }) => (isActive ? activeClass : '')}
+        to={to}
+      >
+        {name}
+      </NavLink>
+    </li>
   );
 }
