@@ -1,13 +1,14 @@
 import styles from './Header.module.css';
+import { NavBar } from '~/components/NavBar';
 
 interface HeaderProps {
   // Define your props here
 }
 
-export function Header(){
+export function Header() {
   return (
-    <div className={styles.container}>
-      {/* Component content here */}
-    </div>
+    <header className={styles.container}>
+      <NavBar />
+    </header>
   );
 }

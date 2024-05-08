@@ -1,7 +1,10 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node';
 
 export const meta: MetaFunction = () => {
-  return [{ title: "Photo Snap | Pricing" }, { name: "description", content: "See our pricing" }];
+  return [
+    { title: 'Photo Snap | Pricing' },
+    { name: 'description', content: 'See our pricing' },
+  ];
 };
 
 export default function Features() {

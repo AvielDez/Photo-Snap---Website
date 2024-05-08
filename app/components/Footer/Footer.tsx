@@ -4,10 +4,10 @@ interface FooterProps {
   // Define your props here
 }
 
-export function Footer(){
+export function Footer() {
   return (
     <div className={styles.container}>
-      {/* Component content here */}
+      <h1>Footer</h1>
     </div>
   );
 }

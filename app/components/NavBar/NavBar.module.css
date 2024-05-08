@@ -1,0 +1,12 @@
+.container {
+  /* Define styles for the component */
+}
+
+.navLinkContainer{
+    display: flex;
+    align-items: center;
+}
+
+.navLinkActive{
+  color: red;
+}
