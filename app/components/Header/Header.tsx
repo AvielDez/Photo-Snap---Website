@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export function Header() {
   return (
-    <header className={styles.container}>
+    <header className={styles.headerContainer}>
       <NavBar />
     </header>
   );

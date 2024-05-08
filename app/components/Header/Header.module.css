@@ -1,3 +1,8 @@
-.container {
-  /* Define styles for the component */
+.headerContainer {
+  height: 4.5rem;
+  background-color: var(--clr-pure-white);
+  position: fixed;
+  width: 100%;
+  color: var(--clr-pure-black);
+  z-index: 1;
 }

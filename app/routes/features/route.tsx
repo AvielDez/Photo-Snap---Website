@@ -9,8 +9,10 @@ export const meta: MetaFunction = () => {
 
 export default function Features() {
   return (
-    <div>
-      <h1>PHOTOSNAP Features</h1>
-    </div>
+    <>
+      <section>
+        <h1>PHOTOSNAP Features</h1>
+      </section>
+    </>
   );
 }

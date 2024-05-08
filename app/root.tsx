@@ -9,15 +9,11 @@ import { AppWrapper } from './components/AppWrapper';
 
 import { cssBundleHref } from '@remix-run/css-bundle';
 import type { LinksFunction } from '@remix-run/node';
-import globalStyles from './styles/global.css';
+import globalStyles from './styles/global.css?url';
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref
-    ? [
-        { rel: 'stylesheet', href: cssBundleHref },
-        { rel: 'stylesheet', href: globalStyles },
-      ]
-    : []),
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: globalStyles },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

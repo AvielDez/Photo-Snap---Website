@@ -6,8 +6,8 @@ interface FooterProps {
 
 export function Footer() {
   return (
-    <div className={styles.container}>
-      <h1>Footer</h1>
-    </div>
+    <footer className={styles.container}>
+      <h1>Footer blah</h1>
+    </footer>
   );
 }
