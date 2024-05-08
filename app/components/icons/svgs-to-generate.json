@@ -1,5 +1,5 @@
 {
     "assets": {
-        "photo-snap-logo": "../app/assets/svgs/photosnap-logo.svg"
+        "photo-snap-logo": "svgs/photosnap-logo.svg"
     }
 }

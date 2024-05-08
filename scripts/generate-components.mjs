@@ -88,9 +88,6 @@ const createIndexFile = async (assets) => {
 const main = async () => {
   const { assets } = JSON.parse(fs.readFileSync(svgsJsonPath, 'utf8'));
 
-  if (!fs.existsSync(outputDirectory)) {
-    fs.mkdirSync(outputDirectory, { recursive: true });
-  }
   if (!fs.existsSync(generatedDirectory)) {
     fs.mkdirSync(generatedDirectory, { recursive: true });
   }
@@ -101,7 +98,7 @@ const main = async () => {
       componentName.charAt(0).toUpperCase() + componentName.slice(1);
     const componentContent = await generateComponent(
       pascalCaseName,
-      path.join(__dirname, file),
+      path.join(__dirname, `../app/assets/${file}`),
     );
 
     fs.writeFileSync(
