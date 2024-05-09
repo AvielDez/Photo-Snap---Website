@@ -1,0 +1,22 @@
+.containedButton{ 
+    background-color: var(--clr-pure-black);
+    color: var(--clr-pure-white);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 9.875rem;
+    padding-block: 1rem;
+    font-size: var(--fs-h4);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--animation-speed) ease-in-out, color var(--animation-speed) ease-in-out;
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+    .containedButton:hover{ 
+        background-color: var(--clr-light-grey);
+        color: var(--clr-pure-black);
+    }
+}

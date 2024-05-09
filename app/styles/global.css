@@ -11,12 +11,16 @@
   --fs-h1: 2.5rem;
   --fs-h2: 1.5rem;
   --fs-h3: 1.125rem;
-  --fs-h4: 1rem;
+  --fs-h4: 0.75rem;
   --fs-body: 1rem;
 
   /*Font Weights*/
   --fw-bold: 700;
   --fw-regular: 400;
+
+  /*Font Weights*/
+  --animation-speed: 150ms;
+
 }
 
 *,

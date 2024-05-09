@@ -1,12 +1,55 @@
-.container {
-  /* Define styles for the component */
+.navContainer {
+  position: absolute;
+  top: 4.5rem;
+  height: 15.625rem;
+  width: 100%;
+  background-color: white;
 }
 
-.navLinkContainer{
-    display: flex;
-    align-items: center;
+.navLinkList{
+  margin-top: 2rem;
+
+  margin-inline: 2rem;
+}
+
+.navLinkList > li{
+  text-transform: uppercase;
+  text-align: center;
+  margin-inline: auto;
+  letter-spacing: 2.5px;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+
+.navLinkList > li:last-child{
+  border-bottom: 1px solid var(--clr-pure-black);
+  padding-bottom: 1.25rem;
 }
 
 .navLinkActive{
   color: red;
+}
+
+@media only screen and (min-width: 1440px) {
+  .navContainer {
+    max-width: 69rem;
+    height: 100%;
+    background-color: bisque;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navLinkList{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 16.875rem;
+      min-width: 16.875rem;
+  }
+  
+  .navLinkActive{
+    color: red;
+  }
 }

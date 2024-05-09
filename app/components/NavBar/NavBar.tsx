@@ -1,5 +1,6 @@
 import styles from './NavBar.module.css';
 import { NavLink } from '@remix-run/react';
+import { Button } from '~/components/Button';
 
 interface NavBarProps {
   // Define your props here
@@ -7,8 +8,8 @@ interface NavBarProps {
 
 export function NavBar() {
   return (
-    <nav className={styles.container}>
-      <NavList className={styles.navLinkContainer}>
+    <nav className={styles.navContainer}>
+      <NavList className={styles.navLinkList}>
         <NavItem
           to="/stories"
           activeClass={styles.navLinkActive}
@@ -25,6 +26,7 @@ export function NavBar() {
           name="Pricing"
         />
       </NavList>
+      <Button onClick={() => console.log('hello')}>get and invite</Button>
     </nav>
   );
 }
