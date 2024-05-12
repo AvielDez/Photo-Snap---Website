@@ -1,17 +1,23 @@
 .containedButton{ 
+    display: block;
+    text-align: center;
     background-color: var(--clr-pure-black);
     color: var(--clr-pure-white);
     border: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 9.875rem;
-    padding-block: 1rem;
-    font-size: var(--fs-h4);
+    min-width: 9.875rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--fs-body);
     cursor: pointer;
     font-weight: bold;
     transition: background-color var(--animation-speed) ease-in-out, color var(--animation-speed) ease-in-out;
 }
 
+@media only screen and (min-width: 768px) {
+    
+}
 
 
 @media only screen and (min-width: 1440px) {

@@ -2,31 +2,34 @@ import styles from './NavBar.module.css';
 import { NavLink } from '@remix-run/react';
 import { Button } from '~/components/Button';
 
-interface NavBarProps {
-  // Define your props here
-}
+type NavBarProps = {
+  isMenuOpen: boolean;
+};
 
-export function NavBar() {
+export function NavBar({ isMenuOpen }: NavBarProps) {
   return (
-    <nav className={styles.navContainer}>
-      <NavList className={styles.navLinkList}>
-        <NavItem
-          to="/stories"
-          activeClass={styles.navLinkActive}
-          name="Stories"
-        />
-        <NavItem
-          to="/features"
-          activeClass={styles.navLinkActive}
-          name="Features"
-        />
-        <NavItem
-          to="/pricing"
-          activeClass={styles.navLinkActive}
-          name="Pricing"
-        />
-      </NavList>
-      <Button onClick={() => console.log('hello')}>get and invite</Button>
+    <nav className={styles.navContainer} hidden={isMenuOpen}>
+      <div className={styles.navListContainer}>
+        <NavList className={styles.navLinkList}>
+          <NavItem
+            to="/stories"
+            activeClass={styles.navLinkActive}
+            name="Stories"
+          />
+          <NavItem
+            to="/features"
+            activeClass={styles.navLinkActive}
+            name="Features"
+          />
+          <NavItem
+            to="/pricing"
+            activeClass={styles.navLinkActive}
+            name="Pricing"
+          />
+        </NavList>
+      </div>
+
+      <Button isLink={true}>get an invite</Button>
     </nav>
   );
 }

@@ -4,12 +4,18 @@
   height: 15.625rem;
   width: 100%;
   background-color: white;
+  padding-inline: 2rem;
+}
+
+.navListContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navLinkList{
-  margin-top: 2rem;
 
-  margin-inline: 2rem;
+  width: 100%;
 }
 
 .navLinkList > li{
@@ -32,13 +38,13 @@
 
 @media only screen and (min-width: 1440px) {
   .navContainer {
+    position: relative;
+    top: 0;
     max-width: 69rem;
     height: 100%;
     background-color: bisque;
     margin-inline: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
   }
   
   .navLinkList{

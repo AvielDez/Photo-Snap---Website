@@ -1,8 +1,8 @@
 import styles from './Footer.module.css';
 
-interface FooterProps {
+type FooterProps = {
   // Define your props here
-}
+};
 
 export function Footer() {
   return (
