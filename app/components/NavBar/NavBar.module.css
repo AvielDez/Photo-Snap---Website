@@ -1,10 +1,11 @@
 .navContainer {
   position: absolute;
   top: 4.5rem;
-  height: 15.625rem;
+  left: 0;
+  height: 15.75rem;
   width: 100%;
   background-color: white;
-  padding-inline: 2rem;
+  padding: 2rem;
 }
 
 .navListContainer{
@@ -14,7 +15,6 @@
 }
 
 .navLinkList{
-
   width: 100%;
 }
 
@@ -23,7 +23,7 @@
   text-align: center;
   margin-inline: auto;
   letter-spacing: 2.5px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-weight: bold;
 }
 
