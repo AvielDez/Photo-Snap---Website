@@ -29,7 +29,9 @@ export function NavBar({ isMenuOpen }: NavBarProps) {
         </NavList>
       </div>
 
-      <Button isLink={true}>get an invite</Button>
+      <Button contained isLink={true}>
+        get an invite
+      </Button>
     </nav>
   );
 }

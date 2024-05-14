@@ -20,7 +20,9 @@ export function Header() {
         <PhotoSnapLogo style={{ height: '1rem', width: '10.625rem' }} />
       </NavLink>
       <NavBar isMenuOpen={isMenuOpen} />
-      <button onClick={menuToggle}>Menu Toggle</button>
+      <button className={styles.navMenuToggle} onClick={menuToggle}>
+        Menu Toggle
+      </button>
     </header>
   );
 }

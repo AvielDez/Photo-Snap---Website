@@ -1,13 +1,10 @@
-.containedButton{ 
+.button{
     display: block;
     text-align: center;
-    background-color: var(--clr-pure-black);
-    color: var(--clr-pure-white);
     border: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     min-width: 9.875rem;
-    width: 100%;
     padding: 0.75rem;
     font-size: var(--fs-body);
     cursor: pointer;
@@ -15,14 +12,73 @@
     transition: background-color var(--animation-speed) ease-in-out, color var(--animation-speed) ease-in-out;
 }
 
+.contained{ 
+    background-color: var(--clr-pure-black);
+    color: var(--clr-pure-white);
+    font-size: var(--fs-body);
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    color: var(--clr-pure-black);
+    transition: text-decoration var(--animation-speed) ease-in-out;
+}
+
+.full{
+    width: 100%;
+}
+
+.fixed {
+    width: 9.875rem;
+}
+
+.arrowIcon{
+    height: 12px;
+    width: 42px;
+    fill: none;
+}
+
+.invertedContained{
+    background-color: var(--clr-pure-white);
+    color: var(--clr-pure-black);
+}
+
+.invertedText{
+    color: var(--clr-pure-white);
+}
+
+.invertedIcon path{
+    stroke: var(--clr-pure-white);
+}
+
 @media only screen and (min-width: 768px) {
-    
+    .contained{ 
+        font-size: var(--fs-h4);
+    }
+
+    .contained:hover{ 
+        font-size: var(--fs-h4);
+        background-color: var(--clr-light-grey);
+        color: var(--clr-pure-black);
+    }
+
+    .invertedContained:hover{
+        background-color: var(--clr-pure-white);
+    }
+
+    .text{
+        font-size: var(--fs-h4);
+    }
+
+    .text:hover{
+        text-decoration: underline;
+    }
 }
 
 
 @media only screen and (min-width: 1440px) {
-    .containedButton:hover{ 
-        background-color: var(--clr-light-grey);
-        color: var(--clr-pure-black);
-    }
+   
 }

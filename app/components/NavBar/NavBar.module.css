@@ -36,15 +36,30 @@
   color: red;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
+
+  .navContainer {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    height: 15.75rem;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+  }
   .navContainer {
     position: relative;
     top: 0;
-    max-width: 69rem;
+    display: flex;
+    align-items: center;
     height: 100%;
     background-color: bisque;
-    margin-inline: auto;
-    align-content: center;
+    padding: 0;
+  }
+
+  .navLinkList > li:last-child{
+    border: none;
+    padding-bottom: 0;
   }
   
   .navLinkList{

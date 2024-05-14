@@ -1,44 +1,57 @@
 import React from 'react';
 import styles from './Button.module.css';
 import { Link } from '@remix-run/react';
+import clsx from 'clsx';
+
+import { RightArrow } from '../icons';
 
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: 'text' | 'contained';
+  text?: boolean;
+  contained?: boolean;
+  widthFixed?: boolean;
+  widthFull?: boolean;
+  inverted?: boolean;
   isLink?: boolean;
   to?: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-} & React.PropsWithChildren;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button({
   children,
-  variant,
+  text,
+  contained,
+  widthFixed,
+  widthFull,
+  inverted,
   isLink = false,
   to,
   ...props
 }: ButtonProps) {
+  const buttonClass = clsx(styles.button, {
+    [styles.text]: text,
+    [styles.contained]: contained,
+    [styles.invertedText]: inverted && text,
+    [styles.invertedContained]: inverted && contained,
+    [styles.fixed]: widthFixed,
+    [styles.full]: widthFull,
+  });
+
+  const arrowIconClass = clsx(styles.arrowIcon, {
+    [styles.invertedIcon]: inverted && text,
+  });
+
   if (isLink) {
     return (
-      <Link to={to ?? '#'} className={getVariantStyling(variant)}>
+      <Link to={to ?? '#'} className={buttonClass}>
         {children}
+        {text && <RightArrow className={styles.arrowIcon} />}
       </Link>
     );
   }
   return (
-    <button {...props} className={getVariantStyling(variant)}>
+    <button {...props} className={buttonClass}>
       {children}
+      {text && <RightArrow className={arrowIconClass} />}
     </button>
   );
-}
-
-function getVariantStyling(variant: ButtonProps['variant']) {
-  /*May want to add variants in the future */
-  switch (variant) {
-    case 'text':
-      return styles.textButton;
-    case 'contained':
-      return styles.containedButton;
-    default:
-      return styles.containedButton;
-  }
 }
