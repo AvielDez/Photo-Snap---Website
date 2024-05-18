@@ -16,13 +16,15 @@ export function Header() {
   }
   return (
     <header className={styles.headerContainer}>
-      <NavLink to="/">
-        <PhotoSnapLogo style={{ height: '1rem', width: '10.625rem' }} />
-      </NavLink>
-      <NavBar isMenuOpen={isMenuOpen} />
-      <button className={styles.navMenuToggle} onClick={menuToggle}>
-        Menu Toggle
-      </button>
+      <div className={styles.navContainer}>
+        <NavLink to="/">
+          <PhotoSnapLogo style={{ height: '1rem', width: '10.625rem' }} />
+        </NavLink>
+        <NavBar isMenuOpen={isMenuOpen} menuToggle={menuToggle} />
+        <button className={styles.navMenuToggle} onClick={menuToggle}>
+          Menu Toggle
+        </button>
+      </div>
     </header>
   );
 }

@@ -1,4 +1,4 @@
-.navContainer {
+.nav {
   position: absolute;
   top: 4.5rem;
   left: 0;
@@ -6,12 +6,6 @@
   width: 100%;
   background-color: white;
   padding: 2rem;
-}
-
-.navListContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .navLinkList{
@@ -33,12 +27,12 @@
 }
 
 .navLinkActive{
-  color: red;
+  border-bottom: 1px solid var(--clr-pure-black);
 }
 
 @media only screen and (min-width: 768px) {
 
-  .navContainer {
+  .nav {
     position: absolute;
     top: 4.5rem;
     left: 0;
@@ -47,32 +41,38 @@
     background-color: white;
     padding: 2rem;
   }
-  .navContainer {
+  .nav {
     position: relative;
     top: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
-    background-color: bisque;
     padding: 0;
-  }
-
-  .navLinkList > li:last-child{
-    border: none;
-    padding-bottom: 0;
   }
   
   .navLinkList{
-      margin-left: 5rem;
+      margin-left: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       max-width: 16.875rem;
-      min-width: 16.875rem;
+      font-size: var(--fs-h4);
   }
-  
-  .navLinkActive{
-    color: red;
+
+  .navLinkList > li{
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transition: opacity var(--animation-speed) ease-in-out;
+  }
+
+  .navLinkList > li:last-child{
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .navLinkList > li:hover{
+    opacity: 30%;
   }
 }

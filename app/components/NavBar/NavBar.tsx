@@ -4,34 +4,37 @@ import { Button } from '~/components/Button';
 
 type NavBarProps = {
   isMenuOpen: boolean;
+  menuToggle: () => void;
 };
 
-export function NavBar({ isMenuOpen }: NavBarProps) {
+export function NavBar({ isMenuOpen, menuToggle }: NavBarProps) {
   return (
-    <nav className={styles.navContainer} hidden={isMenuOpen}>
-      <div className={styles.navListContainer}>
-        <NavList className={styles.navLinkList}>
-          <NavItem
-            to="/stories"
-            activeClass={styles.navLinkActive}
-            name="Stories"
-          />
-          <NavItem
-            to="/features"
-            activeClass={styles.navLinkActive}
-            name="Features"
-          />
-          <NavItem
-            to="/pricing"
-            activeClass={styles.navLinkActive}
-            name="Pricing"
-          />
-        </NavList>
+    <nav className={styles.nav} hidden={isMenuOpen}>
+      <NavList className={styles.navLinkList}>
+        <NavItem
+          to="/stories"
+          activeClass={styles.navLinkActive}
+          name="Stories"
+          menuToggle={menuToggle}
+        />
+        <NavItem
+          to="/features"
+          activeClass={styles.navLinkActive}
+          name="Features"
+          menuToggle={menuToggle}
+        />
+        <NavItem
+          to="/pricing"
+          activeClass={styles.navLinkActive}
+          name="Pricing"
+          menuToggle={menuToggle}
+        />
+      </NavList>
+      <div style={{ marginLeft: 'auto' }}>
+        <Button contained isLink>
+          get an invite
+        </Button>
       </div>
-
-      <Button contained isLink>
-        get an invite
-      </Button>
     </nav>
   );
 }
@@ -49,14 +52,16 @@ type NavItemProps = {
   to: string;
   activeClass: string;
   name: string;
+  menuToggle: () => void;
 };
 
-function NavItem({ to, activeClass, name }: NavItemProps) {
+function NavItem({ to, activeClass, name, menuToggle }: NavItemProps) {
   return (
     <li>
       <NavLink
         className={({ isActive }) => (isActive ? activeClass : '')}
         to={to}
+        onClick={menuToggle}
       >
         {name}
       </NavLink>
