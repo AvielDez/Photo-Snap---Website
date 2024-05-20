@@ -3,6 +3,11 @@
         "photo-snap-logo": "svgs/photosnap-logo.svg",
         "right-arrow": "svgs/right-arrow.svg",
         "close-icon": "svgs/close.svg",
-        "open-icon": "svgs/open.svg"
+        "open-icon": "svgs/open.svg",
+        "facebook": "svgs/facebook.svg",
+        "youtube": "svgs/youtube.svg",
+        "twitter": "svgs/twitter.svg",
+        "pinterest": "svgs/pinterest.svg",
+        "instagram": "svgs/instagram.svg"
     }
 }

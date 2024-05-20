@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
+import { PhotoSections } from '~/components/PhotoSections';
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,8 +10,8 @@ export const meta: MetaFunction = () => {
 
 export default function Home() {
   return (
-    <div>
-      <h1>PHOTOSNAP Home</h1>
-    </div>
+    <>
+      <PhotoSections />
+    </>
   );
 }

@@ -2,3 +2,8 @@ export { default as PhotoSnapLogo } from './generated/PhotoSnapLogo';
 export { default as RightArrow } from './generated/RightArrow';
 export { default as CloseIcon } from './generated/CloseIcon';
 export { default as OpenIcon } from './generated/OpenIcon';
+export { default as Facebook } from './generated/Facebook';
+export { default as Youtube } from './generated/Youtube';
+export { default as Twitter } from './generated/Twitter';
+export { default as Pinterest } from './generated/Pinterest';
+export { default as Instagram } from './generated/Instagram';

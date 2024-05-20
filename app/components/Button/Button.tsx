@@ -25,9 +25,10 @@ export function Button({
   inverted,
   isLink = false,
   to,
+  className,
   ...props
 }: ButtonProps) {
-  const buttonClass = clsx(styles.button, {
+  const buttonClass = clsx(styles.button, className, {
     [styles.text]: text,
     [styles.contained]: contained,
     [styles.invertedText]: inverted && text,

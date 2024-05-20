@@ -1,1 +1,15 @@
-.container{ /* Define styles for the component */ }
+.iconButton{ 
+    display: block;
+    text-align: center;
+    border: none;
+    padding: 0.75rem;
+    font-size: var(--fs-body);
+    cursor: pointer;
+    font-weight: bold;
+    align-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color var(--animation-speed) ease-in-out, color var(--animation-speed) ease-in-out;
+}

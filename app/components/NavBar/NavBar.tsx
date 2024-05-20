@@ -4,10 +4,10 @@ import { Button } from '~/components/Button';
 
 type NavBarProps = {
   isMenuOpen: boolean;
-  menuToggle: () => void;
+  closeMenu: () => void;
 };
 
-export function NavBar({ isMenuOpen, menuToggle }: NavBarProps) {
+export function NavBar({ isMenuOpen, closeMenu }: NavBarProps) {
   return (
     <nav className={styles.nav} hidden={isMenuOpen}>
       <NavList className={styles.navLinkList}>
@@ -15,19 +15,19 @@ export function NavBar({ isMenuOpen, menuToggle }: NavBarProps) {
           to="/stories"
           activeClass={styles.navLinkActive}
           name="Stories"
-          menuToggle={menuToggle}
+          closeMenu={closeMenu}
         />
         <NavItem
           to="/features"
           activeClass={styles.navLinkActive}
           name="Features"
-          menuToggle={menuToggle}
+          closeMenu={closeMenu}
         />
         <NavItem
           to="/pricing"
           activeClass={styles.navLinkActive}
           name="Pricing"
-          menuToggle={menuToggle}
+          closeMenu={closeMenu}
         />
       </NavList>
       <div style={{ marginLeft: 'auto' }}>
@@ -44,7 +44,7 @@ type NavListProps = {
   className: string;
 };
 
-function NavList({ children, className }: NavListProps) {
+export function NavList({ children, className }: NavListProps) {
   return <ul className={className}>{children}</ul>;
 }
 
@@ -52,16 +52,16 @@ type NavItemProps = {
   to: string;
   activeClass: string;
   name: string;
-  menuToggle: () => void;
+  closeMenu?: () => void | undefined;
 };
 
-function NavItem({ to, activeClass, name, menuToggle }: NavItemProps) {
+export function NavItem({ to, activeClass, name, closeMenu }: NavItemProps) {
   return (
     <li>
       <NavLink
         className={({ isActive }) => (isActive ? activeClass : '')}
         to={to}
-        onClick={menuToggle}
+        onClick={closeMenu}
       >
         {name}
       </NavLink>

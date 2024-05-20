@@ -1,3 +1,155 @@
-.container {
-  /* Define styles for the component */
+.container{
+  background-color: var(--clr-pure-black);
+  padding: 3.5rem 2rem;
+}
+
+.navContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 1108px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.photoSnapLogo{
+  order: 1;
+  height: 1rem;
+  width: 10.625rem;
+  margin-bottom: 2rem;
+}
+/*This is change the color of the logo*/
+.photoSnapLogo path:first-child{
+  fill: white;
+}
+
+.navList{
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navList > li{
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  font-size: var(--fs-h4);
+  letter-spacing: 2px;
+  transition: opacity var(--animation-speed) ease-in-out;
+}
+
+.navList > li:hover{
+  opacity: 30%;
+}
+
+.navSocialMediaList{
+  order: 2;
+  width: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.socialMediaIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.socialMediaListItem{
+  cursor: pointer;
+}
+
+.meta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button{
+  margin-bottom: 2rem;
+  font-size: var(--fs-h4);
+}
+
+.copyRight{
+  opacity: 50%;
+  font-size: var(--fs-body);
+}
+
+@media only screen and (min-width: 768px) {
+  .navContainer{
+    height: 9.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links{
+    height: 100%;
+    margin-bottom: 0;
+    align-items: start;
+  }
+
+  .navList{
+    width: 19.5rem;
+    flex-direction: row;
+    order: 2;
+    justify-content: space-between;
+  }
+
+  .navSocialMediaList{
+    margin-top: auto;
+    order: 3;
+    margin-bottom: 0;
+  }
+
+  .meta{
+    height: 9.5rem;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .button{
+    margin-bottom: 0;
+  }
+
+  .copyRight{
+    margin-top: auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navContainer{
+    height: 7.625rem;
+  }
+
+  .meta{
+    height: 7.625rem;
+  }
+
+  .links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 1fr); 
+  }
+
+  .navList{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    flex-direction: column;
+    align-items: start;
+    height: 100%;
+  }
+
+  .navList > li{
+    margin-bottom: 0;
+  }
+
 }

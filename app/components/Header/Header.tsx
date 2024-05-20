@@ -3,16 +3,22 @@ import { NavBar } from '~/components/NavBar';
 import { NavLink } from '@remix-run/react';
 import { PhotoSnapLogo } from '../icons';
 import { useState } from 'react';
+import { IconButton } from '../IconButton';
+import { OpenIcon, CloseIcon } from '../icons';
 
 type HeaderProps = {
   // Define your props here
 };
 
 export function Header() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuClosed, setMenuClosed] = useState(true);
 
   function menuToggle() {
-    setMenuOpen(!isMenuOpen);
+    setMenuClosed(!isMenuClosed);
+  }
+
+  function closeMenu() {
+    setMenuClosed(true);
   }
   return (
     <header className={styles.headerContainer}>
@@ -20,10 +26,14 @@ export function Header() {
         <NavLink to="/">
           <PhotoSnapLogo style={{ height: '1rem', width: '10.625rem' }} />
         </NavLink>
-        <NavBar isMenuOpen={isMenuOpen} menuToggle={menuToggle} />
-        <button className={styles.navMenuToggle} onClick={menuToggle}>
-          Menu Toggle
-        </button>
+        <NavBar isMenuOpen={isMenuClosed} closeMenu={closeMenu} />
+        <IconButton onClick={menuToggle} className={styles.navMenuToggle}>
+          {isMenuClosed ? (
+            <OpenIcon style={{ height: '6px', width: '20px' }} />
+          ) : (
+            <CloseIcon style={{ height: '15px', width: '16px' }} />
+          )}
+        </IconButton>
       </div>
     </header>
   );
