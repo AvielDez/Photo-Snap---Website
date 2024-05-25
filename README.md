@@ -35,4 +35,14 @@ Make sure to deploy the output of `npm run build`
 - `build/server`
 - `build/client`
 
-Time: 5.5 hours
+Time: 7 hours
+
+So far time is was spent on:
+
+- project setup
+- creating script for generating components
+- creating script for generating icon components
+- Built responsive header
+- Build responsive footer
+
+2:40pm -

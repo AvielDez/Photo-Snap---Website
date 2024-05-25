@@ -13,6 +13,7 @@ type ButtonProps = {
   widthFull?: boolean;
   inverted?: boolean;
   isLink?: boolean;
+  noLeftPadding?: boolean;
   to?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -25,6 +26,7 @@ export function Button({
   inverted,
   isLink = false,
   to,
+  noLeftPadding = false,
   className,
   ...props
 }: ButtonProps) {
@@ -35,6 +37,7 @@ export function Button({
     [styles.invertedContained]: inverted && contained,
     [styles.fixed]: widthFixed,
     [styles.full]: widthFull,
+    [styles.noLeftPadding]: noLeftPadding,
   });
 
   const arrowIconClass = clsx(styles.arrowIcon, {

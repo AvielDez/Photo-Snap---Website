@@ -1,3 +1,129 @@
-.container{ 
-    /* Define styles for the component */ 
+.container{
+    position: relative;
+}
+
+.image{
+    max-width: 100%;
+
+}
+
+.textContainer{
+    position: relative;
+    padding: 4.5rem 2rem;
+    background-color: var(--clr-pure-black);
+}
+
+.text{
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.header{
+    font-size: var(--fs-h2);
+    text-transform: uppercase;
+    letter-spacing: 3.33px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 1rem;
+}
+
+.body{
+    opacity: 60%;
+    font-size: var(--fs-body);
+    margin-bottom: 1rem;
+}
+
+.button{
+    font-size: var(--fs-h4);
+}
+
+.light{
+    max-height: 600px;
+    color: var(--clr-pure-black);
+    background-color: var(--clr-pure-white);
+}
+
+.lightBar{
+    position: absolute;
+    top: 0;
+    left: 33;
+    height: 6px;
+    width: 128px;
+    background: var(--clr-main-accent)
+}
+
+@media only screen and (min-width: 768px) {
+    .container{
+        display: flex;
+    }
+
+    .textContainer{
+        flex: 2;
+        padding: 10.5rem 2rem;
+    }
+
+    .imageContainer{
+        flex: 1;
+       position: relative;
+       overflow: hidden;
+   
+    }
+
+    .image{
+        max-width: max-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    .imageLeft > .imageContainer{
+        order: 1
+    }
+    .imageLeft > .textContainer{
+        order: 2
+    }
+
+    .imageRight > .imageContainer{
+        order: 2
+    }
+    .imageRight > .textContainer{
+        order: 1
+    }
+
+    .header{
+        font-size: var(--fs-h1);
+        text-transform: uppercase;
+        letter-spacing: 4.17px;
+        font-weight: bold;
+        line-height: 48px;
+        margin-bottom: 1rem;
+    }
+
+    .lightBar{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 304px;
+        width: 6px;
+        background: var(--clr-main-accent);
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .textContainer{
+        flex: 1;
+        padding: 10.5rem 6.875rem;
+        width: 610px;
+    }
+
+    
+
+    .imageContainer{
+        flex: unset;
+       position: relative;
+       overflow: hidden;
+       width: 830px;
+    }
 }

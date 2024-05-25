@@ -9,7 +9,7 @@
 
   /*Font-sizes*/
   --fs-h1: 2.5rem;
-  --fs-h2: 1.5rem;
+  --fs-h2: 2rem;
   --fs-h3: 1.125rem;
   --fs-h4: 0.75rem;
   --fs-body: 1rem;
@@ -109,7 +109,6 @@ a {
 
 img,
 picture {
-  max-width: 100%;
   display: block;
 }
 

@@ -54,6 +54,10 @@
     stroke: var(--clr-pure-white);
 }
 
+.noLeftPadding{
+    padding: 0.75rem 0.75rem 0.75rem 0;
+}
+
 @media only screen and (min-width: 768px) {
     .contained{ 
         font-size: var(--fs-h4);
