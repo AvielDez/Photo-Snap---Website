@@ -23,13 +23,14 @@ export default function Home() {
         imagePosition="right"
       />
       <PhotoSections
-        header="Create and share your photo stories."
-        body="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
+        header="Beautiful Stories Every Time."
+        body="We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone."
         image={Laptop}
         imageAlt="Man at a lake pier holding a camera during a sunset"
-        buttonText="get an invite"
+        buttonText="View The Stories"
         light
         imagePosition="left"
+        to="/stories"
       />
       <PhotoSections
         header="Create and share your photo stories."

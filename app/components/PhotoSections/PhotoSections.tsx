@@ -11,6 +11,7 @@ type PhotoSectionsProps = {
   imageAlt: string;
   imagePosition?: 'left' | 'right' | 'full';
   light?: boolean;
+  to?: string;
 };
 
 export function PhotoSections({
@@ -21,6 +22,7 @@ export function PhotoSections({
   imageAlt,
   imagePosition,
   light = false,
+  to,
 }: PhotoSectionsProps) {
   const textContainer = clsx(styles.textContainer, {
     [styles.light]: light,
@@ -48,6 +50,8 @@ export function PhotoSections({
             inverted={!light}
             noLeftPadding
             className={styles.button}
+            isLink
+            to={to}
           >
             {buttonText}
           </Button>

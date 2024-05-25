@@ -48,7 +48,7 @@ export function Button({
     return (
       <Link to={to ?? '#'} className={buttonClass}>
         {children}
-        {text && <RightArrow className={styles.arrowIcon} />}
+        {text && <RightArrow className={arrowIconClass} />}
       </Link>
     );
   }
